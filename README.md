@@ -32,3 +32,49 @@ https://app.diagrams.net/#G13HOlrLccmZcgoCz-AlW7e39oFPOOI_Z4
 
 # ローカルでの動作方法：
 ※まだ実施前
+
+# DB設計：
+## tripsテーブル
+
+| Column | Type       | Options     |
+| ------ | ---------- | ----------- |
+| name   | string     | null: false |
+| year   | date       | null: false |
+| month  | date       | null: false |
+| day    | date       | null: false |
+
+### Association
+- has_many :items
+- has_many :comments
+- has_many :missions
+
+## itemsテーブル
+
+| Column | Type       | Options     |
+| ------ | ---------- | ----------- |
+| name   | string     | null: false |
+| number | integer    | null: false |
+
+### Association
+- belongs_to :trips
+
+## missionsテーブル
+
+| Column | Type       | Options     |
+| ------ | ---------- | ----------- |
+| name   | string     | null: false |
+
+### Association
+- belongs_to :trips
+
+## commentsテーブル
+
+| Column | Type       | Options     |
+| ------ | ---------- | ----------- |
+| text   | integer    | null: false |
+| year   | date       | null: false |
+| month  | date       | null: false |
+| day    | date       | null: false |
+
+### Association
+- belongs_to :trips
