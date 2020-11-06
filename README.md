@@ -28,7 +28,7 @@
 ※まだ実施前
 
 # データベース設計：
-※作成でき次第追記
+https://app.diagrams.net/#G13HOlrLccmZcgoCz-AlW7e39oFPOOI_Z4
 
 # ローカルでの動作方法：
 ※まだ実施前
