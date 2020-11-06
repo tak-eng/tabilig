@@ -39,9 +39,7 @@ https://app.diagrams.net/#G13HOlrLccmZcgoCz-AlW7e39oFPOOI_Z4
 | Column | Type       | Options     |
 | ------ | ---------- | ----------- |
 | name   | string     | null: false |
-| year   | date       | null: false |
-| month  | date       | null: false |
-| day    | date       | null: false |
+| day    | integer    | null: false |
 
 ### Association
 - has_many :items
