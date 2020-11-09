@@ -1,370 +1,378 @@
-/**
-* Template Name: Stanley
-* Template URL: https://templatemag.com/stanley-bootstrap-freelancer-template/
-* Author: TemplateMag.com
-* License: https://templatemag.com/license/
-*/
+@charset "utf-8";
 
+
+
+/*全端末（PC・タブレット・スマホ）共通設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+html,body {height: 100%;}
 body {
-  background-color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #555;
-  -webkit-font-smoothing: antialiased;
-  -webkit-overflow-scrolling: touch;
+	margin: 0px;
+	padding: 0px;
+	color: #333;	/*全体の文字色*/
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-size: 16px;	/*文字サイズ*/
+	line-height: 2;		/*行間*/
+	background: #f0f0f0;	/*背景色*/
+	-webkit-text-size-adjust: none;
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
+ul {list-style-type: none;}
+ol {padding-left: 40px;padding-bottom: 15px;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
+iframe {width: 100%;}
+
+@keyframes opa1 {
+0% {opacity: 0;}
+100% {opacity: 1;}
 }
 
-/* Titles */
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #333;
-}
-
-h1 {
-  font-size: 35px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-
-/* Paragraph & Typographic */
-
-p {
-  line-height: 28px;
-  margin-bottom: 25px;
-  font-size: 16px;
-}
-
-.centered {
-  text-align: center;
-}
-
-/* Links */
-
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
 a {
-  color: #1abc9c;
-  word-wrap: break-word;
-  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-  transition: color 0.1s ease-in, background 0.1s ease-in;
+	color: #333;		/*リンクテキストの色*/
+	transition: 0.5s;	/*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
+}
+a:hover {
+	color: #ff4765;			/*マウスオン時の文字色*/
+	text-decoration: none;	/*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
 }
 
-a:hover, a:focus {
-  color: #7b7b7b;
-  text-decoration: none;
-  outline: 0;
+/*ヘッダー（一番上の、ロゴやメニューが入っているブロック）
+---------------------------------------------------------------------------*/
+header {
+	height: 100%;
+	overflow: auto;
+	position: relative;
+	background: url(../images/mainimg.jpg) no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+/*ロゴ画像*/
+header #logo img {
+	display: block;
+	width: 20%;	/*画像の幅*/
+	position: absolute;
+	left: 40%;		/*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
+	bottom: 50%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
 }
 
-a:before, a:after {
-  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-  transition: color 0.1s ease-in, background 0.1s ease-in;
+/*メニュー
+---------------------------------------------------------------------------*/
+/*メニューブロック全体への指定*/
+#menubar {
+	position: absolute;
+	bottom: 20%;	/*ロゴやメニューが入っているブロックに対して、下からの配置場所の指定。*/
+	left: 0px;
+	width: 100%;
+	text-align: center;
+}
+/*メニュー１個あたりの指定*/
+#menubar li {
+	display: inline-block;
+	margin: 0 1%;
+	animation-name: opa1;
+	animation-delay: 1S;
+	animation-duration: 1S;
+	animation-fill-mode: both;
+}
+#menubar li a {
+	text-decoration: none;display: block;text-align: center;
+	width: 140px;	/*メニューの幅*/
+	color: #fff;	/*文字色*/
+	border-bottom: 2px solid transparent;	/*下線の幅、線種、色。transparentは透明の事。*/
+	padding-bottom: 7px;	/*下線と文字の間にとる余白*/
+}
+/*マウスオン時の指定*/
+#menubar li a:hover {
+	border-bottom: 2px solid #fff;	/*下線の幅、線種、色*/
+	letter-spacing: 0.1em;			/*文字間隔を少しだけ広くする指定。そのままがいいならこの１行を削除。*/
 }
 
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
+/*コンテナー（headerとfooterをのぞくブロックを囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	max-width: 1400px;	/*最大幅。これ以上広くならない指定。*/
+	margin: 0 auto;
 }
 
-.navbar {
-  text-transform: uppercase;
-  margin-bottom: 0px;
+/*コンテンツ（上のcontainerの中のブロック）
+---------------------------------------------------------------------------*/
+#contents {
+	overflow: hidden;
+	padding: 50px 3%;
+}
+#contents section + section {
+	padding-top: 50px;
+}
+/*コンテンツ内にあるh2(見出し)タグの指定*/
+#contents h2 {
+	margin-bottom: 20px;
+	clear: both;
+	padding: 0 20px;
+	font-size: 20px;		/*文字サイズ*/
+	text-align: center;		/*文字をセンタリング*/
+	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くする指定*/
+	background: #374c55;	/*背景色*/
+	color: #fff;			/*文字色*/
+	border-radius: 100px;	/*角を丸くする指定。大きめであれば適当で構いません。*/
+}
+/*コンテンツ内にあるh3(見出し)タグの指定*/
+#contents h3 {
+	margin-bottom: 20px;
+	clear: both;
+	padding: 0 20px;
+	font-size: 18px;		/*文字サイズ*/
+	text-align: center;		/*文字をセンタリング*/
+	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くする指定*/
+	border: 2px solid #374c55;	/*枠線の幅、線種、色*/
+	border-radius: 100px;	/*角を丸くする指定。大きめであれば適当で構いません。*/
+	color: #374c55;			/*文字色*/
+}
+/*コンテンツ内にあるp(段落)タグ設定*/
+#contents p {
+	padding: 0px 20px 20px;	/*上、左右、下への余白*/
+}
+/*他。微調整。*/
+#contents p + p {
+	margin-top: -5px;
+}
+#contents h2 + p,
+#contents h3 + p {
+	margin-top: -10px;
 }
 
-.navbar-inverse {
-  padding: 30px 0;
+/*Serviceページ
+---------------------------------------------------------------------------*/
+/*各ブロックごとの設定*/
+.list {
+	overflow: hidden;
+	line-height: 1.5;
+	border-bottom: 1px solid #999;	/*下線の幅、線種、色*/
+	padding: 20px;	/*ボックス内の余白*/
+}
+/*１番目のlistブロックへの追加指定。上に線を入れる。*/
+.list:first-of-type {
+	border-top: 1px solid #999;
+}
+/*h4見出しの設定*/
+.list h4 {
+	font-size: 20px;	/*文字サイズ*/
+	margin-bottom: 10px;
+}
+/*画像の設定*/
+.list img {
+	width: 20%;			/*画像幅*/
+	float: left;		/*画像を左に回り込み*/
+	margin-right: 3%	/*画像の右側に空けるスペース*/
+}
+/*段落タグ*/
+.list p {
+	padding: 0 !important;
 }
 
-@media (max-width: 768px ) {
-  .navbar-inverse {
-    padding: 15px 0;
-  }
+/*フッター設定
+---------------------------------------------------------------------------*/
+footer {
+	clear: both;
+	text-align: center;
+	background: #374c55;	/*背景色*/
+	color: #fff;		/*文字色*/
+	font-size: 85%;		/*文字サイズ*/
 }
-.navbar-inverse {
-  background-color: #1abc9c;
-  border-color: #16a085;
+footer a {
+	color: #fff;	/*リンクテキストの文字色*/
+	text-decoration: none;
 }
-
-.navbar-inverse .navbar-nav>li>a {
-  color: white;
+footer a:hover {
+	color: #fff;	/*マウスオン時の文字色*/
 }
-
-.navbar-inverse .navbar-nav>li>a:hover {
-  color: #222222;
-}
-
-.navbar-brand {
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 2px;
+footer .pr {
+	display: block;
+	font-size: 80%;
 }
 
-.navbar-inverse .navbar-brand {
-  color: white;
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+/*ブロック全体の設定*/
+#new dl {
+	padding-left: 20px;
+	margin-bottom: 15px;
+}
+/*日付設定*/
+#new dt {
+	float: left;
+	width: 9em;
+	letter-spacing: 0.1em;
+}
+/*記事設定*/
+#new dd {
+	padding-left: 9em;
 }
 
-.navbar-inverse .navbar-toggle {
-  border-color: transparent;
+/*テーブル
+---------------------------------------------------------------------------*/
+/*テーブル１行目に入った見出し部分（※caption）*/
+.ta1 caption {
+	border: 1px solid #999;	/*テーブルの枠線の幅、線種、色*/
+	border-bottom: none;	/*下線だけ消す*/
+	text-align: center;		/*文字をセンタリング*/
+	background: #dfdfdf;	/*背景色*/
+	font-weight: bold;		/*太字に*/
+	padding: 10px;			/*ボックス内の余白*/
+}
+/*テーブル１行目に入った見出し部分（※tamidashi）*/
+.ta1 th.tamidashi {
+	width: auto;
+	text-align: center;	/*文字をセンタリング*/
+	background: #dfdfdf;	/*背景色*/
+}
+/*ta1テーブルブロック設定*/
+.ta1 {
+	table-layout: fixed;
+	width: 100%;
+	margin: 0 auto 20px;
+}
+.ta1, .ta1 td, .ta1 th {
+	word-break: break-all;
+	border: 1px solid #999;	/*テーブルの枠線の幅、線種、色*/
+	padding: 10px;			/*テーブル内の余白*/
+}
+/*テーブルの左側ボックス*/
+.ta1 th {
+	text-align: center;	/*センタリング*/
+	width: 30%;			/*幅*/
 }
 
-.progress-bar-theme {
-  background-color: #1abc9c;
+/*PAGE TOP（↑）設定
+---------------------------------------------------------------------------*/
+body .nav-fix-pos-pagetop a {
+	display: none;
+}
+body.is-fixed-pagetop .nav-fix-pos-pagetop a {
+	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
+	width: 60px;		/*ボタンの幅*/
+	line-height: 60px;	/*ボタンの高さ*/
+	bottom: 50px;		/*画面の下からの配置場所指定*/
+	right: 3%;			/*画面の右からの配置場所指定*/
+	background: #555;	/*背景色（古いブラウザ用）*/
+	background: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で、0.5は色が50%出た状態の事。*/
+	color: #fff;		/*文字色*/
+	border-radius: 50%;	/*円形にする指定。この１行を削除すると正方形になります。*/
+}
+body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
+	background: #999;	/*マウスオン時の背景色*/
 }
 
-/* Helpers */
-
-.mt {
-  margin-top: 40px;
-  margin-bottom: 40px;
+/*トップページのNEWアイコン
+---------------------------------------------------------------------------*/
+.newicon {
+	background: #F00;	/*背景色*/
+	color: #FFF;		/*文字色*/
+	font-size: 70%;
+	line-height: 1.5;
+	padding: 2px 5px;
+	border-radius: 2px;
+	margin: 0px 5px;
+	vertical-align: text-top;
 }
 
-.pt {
-  padding-top: 50px;
-  padding-bottom: 50px;
+/*ul.disc,olタグ
+---------------------------------------------------------------------------*/
+ul.disc {
+	list-style: disc;
+	padding: 0 20px 20px 55px;
+}
+ol {
+	padding: 0 20px 20px 42px;
 }
 
-/* +++++ WRAP SECTIONS +++++ */
+/*その他
+---------------------------------------------------------------------------*/
+.look {background: #fff;border: 1px solid #ccc;padding: 5px 10px;border-radius: 4px;}
+.mb15,.mb1em {margin-bottom: 15px;}
+.clear {clear: both;}
+ul.disc {padding: 0em 25px 15px 40px;list-style: disc;}
+.color1, .color1 a {color: #ff4765;}
+.pr {font-size: 10px;}
+.wl {width: 96%;}
+.ws {width: 50%;}
+.c {text-align: center;}
+.r {text-align: right;}
+.l {text-align: left;}
+.big1 {font-size: 40px;letter-spacing: 0.2em;}
+.mini1 {font-size: 11px;display: inline-block;line-height: 1.5;}
+.sh {display: none;}
 
-#ww {
-  padding-top: 70px;
-  padding-bottom: 70px;
-  background-color: #f2f2f2;
+
+
+
+/*画面幅800px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px){
+
+/*ヘッダー（一番上の、ロゴやメニューが入っているブロック）
+---------------------------------------------------------------------------*/
+/*ロゴ画像*/
+header #logo img {
+	width: 30%;	/*画像の幅*/
+	left: 35%;	/*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
 }
 
-#footer {
-  background-color: #2f2f2f;
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
-#footer p {
-  color: white;
+
+
+/*画面幅480px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:480px){
+
+/*ヘッダー（一番上の、ロゴやメニューが入っているブロック）
+---------------------------------------------------------------------------*/
+/*ロゴ画像*/
+header #logo img {
+	width: 50%;	/*画像の幅*/
+	left: 25%;	/*ロゴやメニューが入っているブロックに対して、左からの配置場所の指定。*/
 }
 
-#footer h4 {
-  color: white;
-  text-transform: uppercase;
-  padding-bottom: 20px;
+/*コンテナー（headerとfooterをのぞくブロックを囲むブロック）
+---------------------------------------------------------------------------*/
+#container {
+	font-size: 12px;
+	font-size: 2.93vw;
 }
 
-/* +++++ Color Wraps / Blog Page +++++ */
-
-#grey {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #f2f2f2;
+/*コンテンツ（上のcontainerの中のブロック）
+---------------------------------------------------------------------------*/
+/*コンテンツ内にあるh2(見出し)タグの指定*/
+#contents h2 {
+	font-size: 16px;	/*文字サイズ*/
+}
+/*コンテンツ内にあるh3(見出し)タグの指定*/
+#contents h3 {
+	font-size: 14px;	/*文字サイズ*/
 }
 
-#white {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #ffffff;
+/*Serviceページ
+---------------------------------------------------------------------------*/
+/*h4見出しの設定*/
+.list h4 {
+	font-size: 16px;	/*文字サイズ*/
 }
 
-/* Blog Date*/
-
-bd {
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #d2d2d2;
-  font-weight: 700;
+/*ul.disc,olタグ
+---------------------------------------------------------------------------*/
+ul.disc {
+	padding: 0 0px 20px 35px;
+}
+ol {
+	padding: 0 0px 20px 35px;
 }
 
-/* Blog Author*/
+/*その他
+---------------------------------------------------------------------------*/
+.ws {width: 96%;}
+.big1 {font-size: 22px;letter-spacing: normal;}
 
-ba {
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-/* Blog Quote */
-
-.bq {
-  font-size: 22px;
-  padding-top: 30px;
-}
-
-/* Blog Tags */
-
-bt {
-  font-size: 12px;
-}
-
-/* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
-
-/* Effects also are controled by hover.zoom.js */
-
-.zoom {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  background: transparent url(../img/loader.gif) no-repeat center;
-}
-
-.zoomOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: none;
-  background-image: url(../img/zoom.png);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.zoom2 {
-  opacity: 1;
-}
-
-.zoom2:hover {
-  opacity: 0.5;
-}
-
-/* glyphicon Configuration */
-
-.glyphicon {
-  font-size: 40px;
-  color: #1abc9c;
-}
-
-/* Contact Form */
-
-#contact {
-  padding: 40px 0;
-}
-
-.contact-form {}
-
-.contact-form label {
-  color: #999;
-}
-
-.contact-form input, .contact-form textarea {
-  padding: 10px 12px;
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-  height: auto;
-}
-
-.contact-form .form-send {
-  text-align: center;
-}
-
-.contact-form .form-send button {
-  background: #1abc9c;
-  border: 0;
-  padding: 10px 30px;
-  color: #fff;
-  transition: 0.4s;
-  cursor: pointer;
-}
-
-.contact-form .form-send button:hover {
-  background: #1de0ba;
-}
-
-.contact-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.contact-form .loading {
-  display: none;
-  color: #555;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-  margin: 15px 0;
-}
-
-.contact-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-.contact-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin: 15px 0;
-}
-
-.contact-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin: 15px 0;
-}
-
-/* Copyrights */
-
-#copyrights {
-  background: #222222;
-  padding: 20px 0;
-  text-align: center;
-}
-
-#copyrights p {
-  margin-bottom: 5px;
-  color: #fff;
-}
-
-#copyrights a {
-  color: #1abc9c;
-}
-
-.credits {
-  color: #999;
 }
