@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <title>旅ログ</title>
- <meta name="viewport" content="width=device-width, initial-scale=1">
- <meta name="description" content="ここにサイト説明を入れます">
- <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
- <link rel="stylesheet" href="stylesheets/trips.css">
- <script src="javascript/fixmenu_pagetop.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>旅Log</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ここにサイト説明を入れます">
+  <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+  <link rel="stylesheet" href="stylesheets/trips.css">
+  <script src="javascript/fixmenu_pagetop.js"></script>
 
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
- <script>
- $(function(){
- $('a[href^="#"]').click(function() {
- var speed = 800;
- var href= $(this).attr("href");
- var target = $(href == "#" || href == "" ? 'html' : href);
- var position = target.offset().top;
- $('body,html').animate({scrollTop:position}, speed, 'swing');
- return false;
- });
- });
- </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+  $(function(){
+  $('a[href^="#"]').click(function() {
+  var speed = 800;
+  var href= $(this).attr("href");
+  var target = $(href == "#" || href == "" ? 'html' : href);
+  var position = target.offset().top;
+  $('body,html').animate({scrollTop:position}, speed, 'swing');
+  return false;
+  });
+  });
+  </script>
 </head>
 
 <body>
@@ -31,9 +31,9 @@
   <h1 id="logo"><%= image_tag 'logo.png' %></h1>
   <nav id="menubar">
     <ul>
-      <li><a href="#new">旅行先を登録</a></li>
-      <li><a href="#company">Company</a></li>
-      <li><a href="#service">Service</a></li>
+      <li><a href="#new">コンセプト</a></li>
+      <li><a href="#company">旅行先を登録</a></li>
+      <li><a href="#service">◯◯◯◯</a></li>
     </ul>
   </nav>
 </header>
@@ -44,22 +44,9 @@
 
 <section id="new">
 
-<h2>旅行先を登録</h2>
+<h2>コンセプト</h2>
   <dl>
-    <dt>2020/09/27</dt>
-    <dd>初心者向け無料ホームページテンプレートtp_beginner6公開。</dd>
-    <dt>20XX/00/00</dt>
-    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-    <dt>20XX/00/00</dt>
-    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-    <dt>20XX/00/00</dt>
-    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-    <dt>20XX/00/00</dt>
-    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-    <dt>20XX/00/00</dt>
-    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-    <dt>20XX/00/00</dt>
-    <dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
+    ※後で記入
   </dl>
 
 </section>
@@ -67,36 +54,11 @@
 
 <section id="company">
 
-<h2>Company</h2>
-
-<h3>会社概要</h3>
-  <table class="ta1">
-  <caption>見出しが必要であればここを使います</caption>
-    <tr>
-    <th>見出し</th>
-      <td>ここに説明など入れて下さい。サンプルテキスト。</td>
-    </tr>
-    <tr>
-    <th>見出し</th>
-      <td>ここに説明など入れて下さい。サンプルテキスト。</td>
-    </tr>
-    <tr>
-    <th>見出し</th>
-      <td>ここに説明など入れて下さい。サンプルテキスト。</td>
-    </tr>
-    <tr>
-    <th>見出し</th>
-      <td>ここに説明など入れて下さい。サンプルテキスト。</td>
-    </tr>
-    <tr>
-    <th>見出し</th>
-      <td>ここに説明など入れて下さい。サンプルテキスト。</td>
-    </tr>
-    <tr>
-    <th>見出し</th>
-      <td>ここに説明など入れて下さい。サンプルテキスト。</td>
-    </tr>
-  </table>
+<h2>旅行先を登録</h2>
+  <div>
+    <p>旅行先は？</p>
+    
+  </div>
 
 </section>
 <!--/#company-->
