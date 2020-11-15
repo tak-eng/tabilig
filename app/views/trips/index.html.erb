@@ -55,10 +55,13 @@
 <section id="company">
 
 <h2>旅行先を登録</h2>
-  <div>
-    <p>旅行先は？</p>
-    
-  </div>
+<div>
+    <div class="contents row">
+      <% @trips.each do |trip| %>
+      <p><%= trip.name %></p>
+    </div>
+  <% end %>
+</div>
 
 </section>
 <!--/#company-->
