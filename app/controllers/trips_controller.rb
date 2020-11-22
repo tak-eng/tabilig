@@ -8,7 +8,13 @@ class TripsController < ApplicationController
   end
 
   def create
-    Trip.create(trip_params)
+    @trip = Trip.create(trip_params)
+      if @trip.valid?
+        @trip.save
+        redirect_to controller: :trips, action: :index
+      else
+        render "new"
+      end
   end
 
   private
