@@ -54,68 +54,20 @@
 
 <section id="company">
 
-<h2>旅行先を登録</h2>
-  <div>
-    <p>旅行先は？</p>
-    
-  </div>
+<h2>旅行先</h2>
+<%= link_to '旅行先を登録', new_trip_path, class: "#" %>
+<div>
+    <div class="contents row">
+      <% @trips.each do |trip| %>
+      <p><%= trip.name %></p>
+    </div>
+  <% end %>
+</div>
 
 </section>
 <!--/#company-->
 
-<section id="service">
 
-<h2>Service</h2>
-
-<div class="list">
-<img src="images/sample1.jpg" alt="">
-<h4>ここの見出しのサイズは、cssフォルダのstyle.cssの「.list h4」で変更できます。</h4>
-<p>左の画像の幅もstyle.cssの「.list img」のwidthの数字で変更できます。</p>
-</div>
-
-<div class="list">
-<img src="images/sample2.jpg" alt="">
-<h4>見出しを入れます。</h4>
-<p>説明を入れます。</p>
-</div>
-
-<div class="list">
-<img src="images/sample3.jpg" alt="">
-<h4>見出しを入れます。</h4>
-<p>説明を入れます。</p>
-</div>
-
-<div class="list">
-<img src="images/sample4.jpg" alt="">
-<h4>見出しを入れます。</h4>
-<p>説明を入れます。</p>
-</div>
-
-<div class="list">
-<img src="images/sample5.jpg" alt="">
-<h4>見出しを入れます。</h4>
-<p>説明を入れます。</p>
-</div>
-
-</section>
-<!--/#service-->
-
-<section id="contact">
-
-<h2>Contact</h2>
-<p class="c">お問い合わせは以下までお願い致します。</p>
-<p class="c"><span class="big1">03-0000-0000</span><br>
-Email：aaa@aaa</p>
-<p class="c"><img src="sample1.jpg" alt="test" width="300"></p>
-
-</section>
-<!--/#contact-->
-
-</div>
-<!--/#contents-->
-
-</div>
-<!--/#container-->
 
 <footer>
 <small>Copyright&copy; <a href="index.html">SAMPLE COMPANY</a> All Rights Reserved.</small>

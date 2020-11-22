@@ -1,0 +1,9 @@
+<div class="contents row">
+  <div class="container">
+    <h3>旅行先は？</h3>
+    <%= form_with(model: @trip, local: true) do |form| %>
+      <%= form.text_field :name, placeholder: "旅行先" %>
+      <%= form.submit "登録する" %>
+    <% end %>
+  </div>
+</div>
