@@ -11,7 +11,7 @@ class TripsController < ApplicationController
     @trip = Trip.create(trip_params)
       if @trip.valid?
         @trip.save
-        redirect_to controller: :trips, action: :index
+        redirect_to "/trips/:trip_id/items"
       else
         render "new"
       end
