@@ -1,4 +1,7 @@
+<div class='register-btn'>
+  旅行先：<%=  @trip.name %>
 
   <div class='register-btn'>
-    <%= link_to '持ち物登録', new_trip_item_path(@trip.id), method: :post, class: "item-red-btn" %>
+    <%= link_to '持ち物登録', trip_items_path(@trip.id), method: :get, class: "item-red-btn" %>
   </div>
+</div>
