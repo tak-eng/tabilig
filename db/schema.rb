@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_15_025815) do
+ActiveRecord::Schema.define(version: 2020_11_22_062453) do
+
+  create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "number", null: false
+    t.bigint "trip_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["trip_id"], name: "index_items_on_trip_id"
+  end
 
   create_table "trips", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -18,4 +27,5 @@ ActiveRecord::Schema.define(version: 2020_11_15_025815) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "items", "trips"
 end

@@ -1,0 +1,18 @@
+<div class=#'>
+ <h1>旅行先：<%=  @trip.name %></h1>
+  <div class='#'>
+    <%= link_to '持ち物登録', trip_items_path(@trip.id), method: :get, class: "#" %>
+     <div>
+      <% @items.each do |item| %>
+        <%if @items =nil %>
+          持ち物を登録してください
+        <%else%>
+         <li>
+           <%= item.name %>
+           <%= item.number%>
+         </li>
+        <% end %> 
+      <% end %> 
+     </div>
+  </div>
+</div>

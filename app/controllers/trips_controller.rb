@@ -11,10 +11,15 @@ class TripsController < ApplicationController
     @trip = Trip.create(trip_params)
       if @trip.valid?
         @trip.save
-        redirect_to controller: :trips, action: :index
+        redirect_to trip_path(@trip.id)
       else
         render "new"
       end
+  end
+
+  def show
+      @trip = Trip.find(params[:id])    
+      @items = Item.all
   end
 
   private
