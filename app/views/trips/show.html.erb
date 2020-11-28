@@ -1,11 +1,15 @@
-<div class="#">
- <h1>旅行先：<%=  @trip.name %></h1>
+<div class="item-register">
+ <div class = "trip-name">
+  <h1>旅行先：<%=  @trip.name %></h1>
+ </div>
   <div class='#'>
-    <%= link_to '持ち物登録', trip_items_path(@trip.id), method: :get, class: "#" %>
-     <div>
+    <div class = "register-btn">
+      <%= link_to '持ち物登録', trip_items_path(@trip.id), method: :get, class: "register-red-btn" %>
+    </div>
+    <div>
       <% @items.each do |item| %>
         <%if @items = nil %>
-          持ち物を登録してください
+          <%= "持ち物を登録してください" %>
         <%else%>
          <li>
            <%= item.name %>
@@ -13,7 +17,7 @@
          </li>
         <% end %> 
       <% end %> 
-     </div>
+    </div>
      <%=link_to 'もどる', root_path, class:"#" %>
   </div>
 </div>

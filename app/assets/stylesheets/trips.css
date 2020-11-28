@@ -376,3 +376,31 @@ ol {
 .big1 {font-size: 22px;letter-spacing: normal;}
 
 }
+.trip-name{
+	color:white;
+	background-color: gray;
+	font-size: 50px;
+	text-align: center;
+}
+
+.register-btn {
+  width: 50%;
+	margin: 20px;
+}
+
+.register-red-btn {
+  width: 100%;
+  background: #ea352d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 30px;
+	cursor: pointer;
+	padding: 15px;
+  margin-top: 50px;
+}
+
+.item-register{
+	background-image: url('bag.jpg');
+	background-size: cover;
+	height:100%
+}
