@@ -59,7 +59,7 @@
 <div>
     <div class="contents row">
       <% @trips.each do |trip| %>
-      <p><%= trip.name %></p>
+      <p><%= link_to trip.name, "#", class: "#" %></p>
       <% end %>
     </div>
 </div>

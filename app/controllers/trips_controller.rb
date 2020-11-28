@@ -18,9 +18,8 @@ class TripsController < ApplicationController
   end
 
   def show
-    def show
-      @trip = Trip.find(params[:id])
-    end
+      @trip = Trip.find(params[:id])    
+      @items = Item.all
   end
 
   private
