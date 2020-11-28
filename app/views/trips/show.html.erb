@@ -6,8 +6,10 @@
         <%if @items =nil %>
           持ち物を登録してください
         <%else%>
-          <%= item.name %>
-          <%= item.number%>
+         <li>
+           <%= item.name %>
+           <%= item.number%>
+         </li>
         <% end %> 
       <% end %> 
      </div>
