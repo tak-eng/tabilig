@@ -4,15 +4,16 @@
     <%= link_to '持ち物登録', trip_items_path(@trip.id), method: :get, class: "#" %>
      <div>
       <% @items.each do |item| %>
-        <%if @items =nil %>
+        <%if @items = nil %>
           持ち物を登録してください
         <%else%>
          <li>
            <%= item.name %>
-           <%= item.number%>
+           <%= item.number %>
          </li>
         <% end %> 
       <% end %> 
      </div>
+     <%=link_to 'もどる', root_path, class:"#" %>
   </div>
 </div>
