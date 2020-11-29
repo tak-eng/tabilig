@@ -19,7 +19,7 @@ class TripsController < ApplicationController
 
   def show
       @trip = Trip.find(params[:id])    
-      @items = Item.all
+      @items = @trip.items
   end
 
   private
