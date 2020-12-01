@@ -2,7 +2,7 @@
  <div class = "trip-name">
   <h1>旅行先：<%=  @trip.name %></h1>
  </div>
-  <div class='#'>
+  <div class='total_btn'>
     <div class = "register-btn">
       <%= link_to '持ち物登録', trip_items_path(@trip.id), method: :get, class: "register-red-btn" %>
     </div>

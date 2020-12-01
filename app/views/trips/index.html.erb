@@ -33,7 +33,6 @@
     <ul>
       <li><a href="#new">コンセプト</a></li>
       <li><a href="#company">旅行先を登録</a></li>
-      <li><a href="#service">◯◯◯◯</a></li>
     </ul>
   </nav>
 </header>
@@ -54,12 +53,12 @@
 
 <section id="company">
 
-<h2>旅行先</h2>
-<%= link_to '旅行先を登録', new_trip_path, class: "#" %>
+<h2>旅行先 <%= link_to '(登録)', new_trip_path, class: 'btn trip' %></h2>
+
 <div>
-    <div class="contents row">
+    <div class="#">
       <% @trips.each do |trip| %>
-      <p><%= link_to trip.name, trip_path(trip.id), class: "#" %></p>
+      <p><%= link_to trip.name, trip_path(trip.id), class: "trip_name" %></p>
       <% end %>
     </div>
 </div>
