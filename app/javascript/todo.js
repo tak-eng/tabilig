@@ -1,8 +1,8 @@
 
 window.addEventListener('load', function(){
-  const addTaskTrigger = document.getElementsByClassName('js-item-trigger')[0];
-  const addTaskTarget = document.getElementsByClassName('js-item-target')[0];
-  const addTaskValue = document.getElementsByClassName('js-item-value')[0];
+  const addTaskTrigger = document.getElementsByClassName('js-addTask-trigger')[0];
+  const addTaskTarget = document.getElementsByClassName('js-addTask-target')[0];
+  const addTaskValue = document.getElementsByClassName('js-addTask-value')[0];
   const removeTask = removeButton => {
     const targetTask = removeButton.closest('li');
     addTaskTarget.removeChild(targetTask);
@@ -10,9 +10,20 @@ window.addEventListener('load', function(){
   const addTask = task => {
     const listItem = document.createElement('li');
     const removeButton = document.createElement('button');
+    const completeButton  = document.createElement('button');
+    const completeTask = completeButton => {
+      const targetTask = completeButton.closest('li');
+      targetTask.classList.add('isComplete');
+      targetTask.removeChild(completeButton);
+    };
+
+    completeButton.innerText = '完了';
+    completeButton.addEventListener('click', () => completeTask(completeButton));
     removeButton.innerText = '削除';
     removeButton.addEventListener('click', () => removeTask(removeButton));
+
     listItem.innerText = task;
+    listItem.append(completeButton);
     listItem.append(removeButton);
     addTaskTarget.appendChild(listItem);
   };
