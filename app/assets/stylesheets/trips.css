@@ -83,6 +83,7 @@ header #logo img {
 	color: #fff;	/*文字色*/
 	border-bottom: 2px solid transparent;	/*下線の幅、線種、色。transparentは透明の事。*/
 	padding-bottom: 7px;	/*下線と文字の間にとる余白*/
+	font-size: 20px;
 }
 /*マウスオン時の指定*/
 #menubar li a:hover {
