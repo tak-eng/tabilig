@@ -1,12 +1,12 @@
 <div class="item-register">
  <div class = "trip-name">
-  <h1>旅行先：<%=  @trip.name %></h1>
+  <h1>旅行先：<%=  @trip.name %><%=link_to '(Topへ)', root_path, class:"back" %></h1>
  </div>
   <div class='total_btn'>
-    <div class = "register-btn">
+    <div class = "item btn">
       <%= link_to '持ち物登録', trip_items_path(@trip.id), method: :get, class: "register-red-btn" %>
     </div>
-    <div class = "register-btn">
+    <div class = "todo btn">
       <%= link_to 'ミッションの登録', trip_missions_path(@trip.id), method: :get, class: "register-red-btn" %>
     </div>
     <div>
@@ -21,6 +21,5 @@
         <% end %> 
       <% end %> 
     </div>
-     <%=link_to 'もどる', root_path, class:"#" %>
   </div>
 </div>
