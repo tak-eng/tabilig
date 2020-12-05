@@ -144,56 +144,6 @@ header #logo img {
 	margin-top: -10px;
 }
 
-/*Serviceページ
----------------------------------------------------------------------------*/
-/*各ブロックごとの設定*/
-.list {
-	overflow: hidden;
-	line-height: 1.5;
-	border-bottom: 1px solid #999;	/*下線の幅、線種、色*/
-	padding: 20px;	/*ボックス内の余白*/
-}
-/*１番目のlistブロックへの追加指定。上に線を入れる。*/
-.list:first-of-type {
-	border-top: 1px solid #999;
-}
-/*h4見出しの設定*/
-.list h4 {
-	font-size: 20px;	/*文字サイズ*/
-	margin-bottom: 10px;
-}
-/*画像の設定*/
-.list img {
-	width: 20%;			/*画像幅*/
-	float: left;		/*画像を左に回り込み*/
-	margin-right: 3%	/*画像の右側に空けるスペース*/
-}
-/*段落タグ*/
-.list p {
-	padding: 0 !important;
-}
-
-/*フッター設定
----------------------------------------------------------------------------*/
-footer {
-	clear: both;
-	text-align: center;
-	background: #374c55;	/*背景色*/
-	color: #fff;		/*文字色*/
-	font-size: 85%;		/*文字サイズ*/
-}
-footer a {
-	color: #fff;	/*リンクテキストの文字色*/
-	text-decoration: none;
-}
-footer a:hover {
-	color: #fff;	/*マウスオン時の文字色*/
-}
-footer .pr {
-	display: block;
-	font-size: 80%;
-}
-
 /*トップページ内「更新情報・お知らせ」ブロック
 ---------------------------------------------------------------------------*/
 /*ブロック全体の設定*/
