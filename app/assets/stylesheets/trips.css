@@ -196,38 +196,6 @@ header #logo img {
 	width: 30%;			/*幅*/
 }
 
-/*PAGE TOP（↑）設定
----------------------------------------------------------------------------*/
-body .nav-fix-pos-pagetop a {
-	display: none;
-}
-body.is-fixed-pagetop .nav-fix-pos-pagetop a {
-	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
-	width: 60px;		/*ボタンの幅*/
-	line-height: 60px;	/*ボタンの高さ*/
-	bottom: 50px;		/*画面の下からの配置場所指定*/
-	right: 3%;			/*画面の右からの配置場所指定*/
-	background: #555;	/*背景色（古いブラウザ用）*/
-	background: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で、0.5は色が50%出た状態の事。*/
-	color: #fff;		/*文字色*/
-	border-radius: 50%;	/*円形にする指定。この１行を削除すると正方形になります。*/
-}
-body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
-	background: #999;	/*マウスオン時の背景色*/
-}
-
-/*トップページのNEWアイコン
----------------------------------------------------------------------------*/
-.newicon {
-	background: #F00;	/*背景色*/
-	color: #FFF;		/*文字色*/
-	font-size: 70%;
-	line-height: 1.5;
-	padding: 2px 5px;
-	border-radius: 2px;
-	margin: 0px 5px;
-	vertical-align: text-top;
-}
 
 /*ul.disc,olタグ
 ---------------------------------------------------------------------------*/
