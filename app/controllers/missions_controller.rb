@@ -1,6 +1,7 @@
 class MissionsController < ApplicationController
   def index
     @missions = Mission.all
+    @trip = Trip.find(params[:trip_id])
   end
 
   def new

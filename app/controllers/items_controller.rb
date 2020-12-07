@@ -1,6 +1,7 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
+    @trip = Trip.find(params[:trip_id])
   end
 
   def new

@@ -1,18 +1,16 @@
-<div class="item-main">
-  <h2 class="items-sell-title">持ち物と個数を入力</h2>
-  <ul class="todo js-item-target"></ul>
+ <div class="item-main">
   <%= form_with model: @item, local: true do |f| %>
-    <div class="img-upload">
-      <div class="click-upload">
-          <%= f.text_field :name, class:"js-item-value", placeholder:"(例)パスポート" %>
-          <%= f.number_field :number, class:"js-item-value", placeholder:"個数" , style:"width:50px"%>
-          <button class="js-item-trigger" type="button">次へ</button>
+    <%= f.text_field :name, id:"content", placeholder:"(例)財布" %>
+    <%= f.submit '登録する' , id: "submit" %>
+  <% end %>
+  <div id="list">
+  </div>
+
+  <% @items.each do |item| %>
+    <div class="post" %>
+      <div class="post-content">
+        ・<%= item.name %>
       </div>
     </div>
-    
-    <div class="＃">
-      <%= f.submit "登録する" ,class:"＃" %>
-      <%=link_to 'もどる', root_path, class:"#" %>
-    </div>
-  <% end %> 
-</div>
+  <% end %>
+ </div>

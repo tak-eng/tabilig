@@ -1,17 +1,16 @@
-<div class="todo-main">
-  <h2 class="todo-title">現地でやること</h2>
-  <ul class="todo js-addTask-target"></ul>
+ <div class="todo-main">
   <%= form_with model: @item, local: true do |f| %>
-    <div class="img-upload">
-      <div class="click-upload">
-          <%= f.text_field :name, class:"js-addTask-value", placeholder:"(例)名産品を買う" %>
-          <button class="js-addTask-trigger" type="button">次へ</button>
+    <%= f.text_field :name, id:"content", placeholder:"(例)名産品を買う" %>
+    <%= f.submit '登録する' , id: "submit" %>
+  <% end %>
+  <div id="list">
+  </div>
+
+  <% @missions.each do |mission| %>
+    <div class="post" data-id=<%= mission.id %> data-check=<%= mission.checked %>>
+      <div class="post-content">
+        ・<%= mission.name %>
       </div>
     </div>
-    
-    <div class="＃">
-      <%= f.submit "登録する" ,class:"＃" %>
-      <%=link_to 'もどる', root_path, class:"#" %>
-    </div>
-  <% end %> 
-</div>
+  <% end %>
+ </div>

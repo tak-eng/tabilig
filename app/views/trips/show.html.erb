@@ -9,14 +9,22 @@
     <div class = "todo btn">
       <%= link_to 'ミッションの登録', trip_missions_path(@trip.id), method: :get, class: "register-red-btn" %>
     </div>
-    <div>
+     <div>
       <% @items.each do |item| %>
         <%if @items = nil %>
           <%= "持ち物を登録してください" %>
         <%else%>
          <li>
            <%= item.name %>
-           <%= item.number %>
+         </li>
+        <% end %> 
+      <% end %> 
+      <% @missions.each do |mission| %>
+        <%if @missions = nil %>
+          <%= "持ち物を登録してください" %>
+        <%else%>
+         <li>
+           <%= mission.name %>
          </li>
         <% end %> 
       <% end %> 
