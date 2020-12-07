@@ -15,7 +15,3 @@
 .js-addTask-value{
   color: antiquewhite;
 }
-
-div[data-check="true"] {
-  background: #585555;
-}
