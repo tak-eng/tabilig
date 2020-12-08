@@ -1,16 +1,11 @@
  <div class="todo-main">
+ <h1 class="todo-messeage">あなたは現地でどんな「０→１」体験をしますか？</h1>
   <%= form_with model: @item, local: true do |f| %>
-    <%= f.text_field :name, id:"content", placeholder:"(例)名産品を買う" %>
+   <div class="todo-form">
+    <%= f.text_field :name, id:"content", placeholder:"(例)名産品を買う"%>
     <%= f.submit '登録する' , id: "submit" %>
+   </div>
   <% end %>
   <div id="list">
   </div>
-
-  <% @missions.each do |mission| %>
-    <div class="post" data-id=<%= mission.id %> data-check=<%= mission.checked %>>
-      <div class="post-content">
-        ・<%= mission.name %>
-      </div>
-    </div>
-  <% end %>
  </div>

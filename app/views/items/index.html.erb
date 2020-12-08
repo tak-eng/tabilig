@@ -1,16 +1,11 @@
  <div class="item-main">
+  <h1 class="item-messeage">何を持っていきますか？</h1>
   <%= form_with model: @item, local: true do |f| %>
+   <div class="item-form">
     <%= f.text_field :name, id:"content", placeholder:"(例)財布" %>
     <%= f.submit '登録する' , id: "submit" %>
+   </div>
   <% end %>
   <div id="list">
   </div>
-
-  <% @items.each do |item| %>
-    <div class="post" %>
-      <div class="post-content">
-        ・<%= item.name %>
-      </div>
-    </div>
-  <% end %>
  </div>

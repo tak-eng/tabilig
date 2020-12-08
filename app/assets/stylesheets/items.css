@@ -14,3 +14,18 @@ a {
   background-blend-mode:lighten; 
   height:1000px; 
 }
+
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+}
+
+input[type="submit"] {
+  width: 100px;
+  height: 40px;
+}
+
+h1.item-messeage{
+	font-size: 30px;
+	text-align: center;
+}

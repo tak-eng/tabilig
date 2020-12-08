@@ -4,23 +4,25 @@
  </div>
   <div class='total_btn'>
     <div class = "item btn">
-      <%= link_to  "持ち物登録", trip_items_path(@trip.id), method: :get, class: "register-red-btn" %>
+      <%= link_to  "持ち物登録", trip_items_path(@trip.id), method: :get, class:"btn-gradient-3d-simple" %>
     </div>
-    <div class = "todo btn">
-      <%= link_to 'ミッションの登録', trip_missions_path(@trip.id), method: :get, class: "register-red-btn" %>
-    </div>
-     <div>
+    <div>
       <% @items.each do |item| %>
         <%if @items = nil %>
           <%= "持ち物を登録してください" %>
         <%else%>
-         <li>
-           <%= item.name %>
-         </li>
+          <li>
+            <%= item.name %>
+          </li>
         <% end %> 
       <% end %> 
+    </div>
+    <div class = "todo_btn">
+      <%= link_to "ミッションの登録", trip_missions_path(@trip.id), method: :get, class:"btn-gradient-2d-simple" %>
+    </div>
+    <div>
       <% @missions.each do |mission| %>
-        <%if @missions = nil %>
+        <%if @missions == nil %>
           <%= "持ち物を登録してください" %>
         <%else%>
          <li>

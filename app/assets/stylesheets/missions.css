@@ -15,3 +15,13 @@
 .js-addTask-value{
   color: antiquewhite;
 }
+
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+}
+
+input[type="submit"] {
+  width: 100px;
+  height: 40px;
+}
