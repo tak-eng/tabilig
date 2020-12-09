@@ -10,9 +10,10 @@ class MissionsController < ApplicationController
 
   def create
     @mission = Mission.new(mission_params)
+    @trip = Trip.find(params[:trip_id])
       if @mission.valid?
          @mission.save
-         redirect_to root_path
+         redirect_to controller: :trips, action: :show, id: @trip.id
       else
         render "index"
       end
