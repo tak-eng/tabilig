@@ -18,9 +18,15 @@ class TripsController < ApplicationController
   end
 
   def show
-      @trip = Trip.find(params[:id])    
-      @items = @trip.items
-      @missions = @trip.missions
+    @trip = Trip.find(params[:id])    
+    @items = @trip.items
+    @missions = @trip.missions
+  end
+
+  def destroy
+    trip = Trip.find(params[:id])
+    trip.destroy
+    redirect_to root_path
   end
 
   private
