@@ -19,6 +19,11 @@ class ItemsController < ApplicationController
       end
   end
 
+  def destroy
+    Item = Item.find(params[:id])
+    item.destroy
+  end
+
   private
 
   def item_params
