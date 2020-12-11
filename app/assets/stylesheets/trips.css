@@ -403,3 +403,14 @@ h1.todo-messeage{
 .item-form{
 	text-align: center;
 }
+
+.item-list{
+	list-style: none;
+}
+.todo-list{
+	list-style: none;
+}
+
+input[type=checkbox]:checked + span.strikethrough{
+  text-decoration: line-through;
+}
