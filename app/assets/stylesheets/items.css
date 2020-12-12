@@ -1,0 +1,31 @@
+.isComplete {
+  text-decoration: line-through;
+}
+
+a {
+  text-decoration: none;
+}
+
+.item-main{
+  background-image: url('bag.jpg');
+	background-position:center;  
+	background-size:cover;       
+	background-color:rgba(255,255,255,0.7);
+  background-blend-mode:lighten; 
+  height:1000px; 
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+}
+
+input[type="submit"] {
+  width: 100px;
+  height: 40px;
+}
+
+h1.item-messeage{
+	font-size: 30px;
+	text-align: center;
+}

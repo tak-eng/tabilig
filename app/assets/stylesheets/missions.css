@@ -1,0 +1,27 @@
+.todo-main{
+  background-image: url('bag.jpg');
+	background-position:center;  
+	background-size:cover;       
+	background-color:rgba(255,255,255,0.7);
+  background-blend-mode:lighten;                                                                 
+	height:1000px; 
+}
+.todo-title{
+  text-align: center;
+  background:lightcyan;
+  width:200px;
+  font-size: 20px;
+}
+.js-addTask-value{
+  color: antiquewhite;
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 40px;
+}
+
+input[type="submit"] {
+  width: 100px;
+  height: 40px;
+}

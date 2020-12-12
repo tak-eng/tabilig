@@ -1,27 +1,11 @@
-<%# <div class="#">
-  持ち物リスト
-  <div>
-    <ul id="todo js-item-target"></ul>
-      <input id="js-item-value" type="text" />
-      <button id="js-item-trigger" type="button">持ち物を追加する</button>
-    ● <input type="text", placeholder="(例)パスポート"> <input type="number", style="width:50px", placeholder="個数">
-  </div>
-    <input type="submit", value="登録">  
-</div> %>
-
-<div class="items-sell-main">
-  <h2 class="items-sell-title">持ち物と個数を入力</h2>
+ <div class="item-main">
+  <h1 class="item-messeage">何を持っていきますか？</h1>
   <%= form_with model: @item, local: true do |f| %>
-    <div class="img-upload">
-      <div class="click-upload">
-        ・<%= f.text_field :items, name: 'name',id:"item-image", placeholder:"(例)パスポート" %>
-          <%= f.number_field :items, name: 'number',id:"item-image", placeholder:"個数" , style:"width:50px"%>
-      </div>
-    </div>
-
-    <div class="＃">
-      <%= f.submit "登録する" ,class:"＃" %>
-      <%=link_to 'もどる', root_path, class:"#" %>
-    </div>
+   <div class="item-form">
+    <%= f.text_field :name, id:"content", placeholder:"(例)財布" %>
+    <%= f.submit '登録する' , id: "submit" %>
+   </div>
   <% end %>
-</div>
+  <div id="list">
+  </div>
+ </div>

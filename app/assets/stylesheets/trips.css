@@ -37,7 +37,7 @@ a {
 	transition: 0.5s;	/*マウスオン時の移り変わるまでの時間設定。0.5秒。*/
 }
 a:hover {
-	color: #ff4765;			/*マウスオン時の文字色*/
+	color: white;			/*マウスオン時の文字色*/
 	text-decoration: none;	/*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
 }
 
@@ -83,6 +83,7 @@ header #logo img {
 	color: #fff;	/*文字色*/
 	border-bottom: 2px solid transparent;	/*下線の幅、線種、色。transparentは透明の事。*/
 	padding-bottom: 7px;	/*下線と文字の間にとる余白*/
+	font-size: 20px;
 }
 /*マウスオン時の指定*/
 #menubar li a:hover {
@@ -143,56 +144,6 @@ header #logo img {
 	margin-top: -10px;
 }
 
-/*Serviceページ
----------------------------------------------------------------------------*/
-/*各ブロックごとの設定*/
-.list {
-	overflow: hidden;
-	line-height: 1.5;
-	border-bottom: 1px solid #999;	/*下線の幅、線種、色*/
-	padding: 20px;	/*ボックス内の余白*/
-}
-/*１番目のlistブロックへの追加指定。上に線を入れる。*/
-.list:first-of-type {
-	border-top: 1px solid #999;
-}
-/*h4見出しの設定*/
-.list h4 {
-	font-size: 20px;	/*文字サイズ*/
-	margin-bottom: 10px;
-}
-/*画像の設定*/
-.list img {
-	width: 20%;			/*画像幅*/
-	float: left;		/*画像を左に回り込み*/
-	margin-right: 3%	/*画像の右側に空けるスペース*/
-}
-/*段落タグ*/
-.list p {
-	padding: 0 !important;
-}
-
-/*フッター設定
----------------------------------------------------------------------------*/
-footer {
-	clear: both;
-	text-align: center;
-	background: #374c55;	/*背景色*/
-	color: #fff;		/*文字色*/
-	font-size: 85%;		/*文字サイズ*/
-}
-footer a {
-	color: #fff;	/*リンクテキストの文字色*/
-	text-decoration: none;
-}
-footer a:hover {
-	color: #fff;	/*マウスオン時の文字色*/
-}
-footer .pr {
-	display: block;
-	font-size: 80%;
-}
-
 /*トップページ内「更新情報・お知らせ」ブロック
 ---------------------------------------------------------------------------*/
 /*ブロック全体の設定*/
@@ -245,38 +196,6 @@ footer .pr {
 	width: 30%;			/*幅*/
 }
 
-/*PAGE TOP（↑）設定
----------------------------------------------------------------------------*/
-body .nav-fix-pos-pagetop a {
-	display: none;
-}
-body.is-fixed-pagetop .nav-fix-pos-pagetop a {
-	display: block;text-decoration: none;text-align: center;position: fixed;animation-name: opa1;animation-duration: 1s;animation-fill-mode: forwards;
-	width: 60px;		/*ボタンの幅*/
-	line-height: 60px;	/*ボタンの高さ*/
-	bottom: 50px;		/*画面の下からの配置場所指定*/
-	right: 3%;			/*画面の右からの配置場所指定*/
-	background: #555;	/*背景色（古いブラウザ用）*/
-	background: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒の事で、0.5は色が50%出た状態の事。*/
-	color: #fff;		/*文字色*/
-	border-radius: 50%;	/*円形にする指定。この１行を削除すると正方形になります。*/
-}
-body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
-	background: #999;	/*マウスオン時の背景色*/
-}
-
-/*トップページのNEWアイコン
----------------------------------------------------------------------------*/
-.newicon {
-	background: #F00;	/*背景色*/
-	color: #FFF;		/*文字色*/
-	font-size: 70%;
-	line-height: 1.5;
-	padding: 2px 5px;
-	border-radius: 2px;
-	margin: 0px 5px;
-	vertical-align: text-top;
-}
 
 /*ul.disc,olタグ
 ---------------------------------------------------------------------------*/
@@ -375,4 +294,123 @@ ol {
 .ws {width: 96%;}
 .big1 {font-size: 22px;letter-spacing: normal;}
 
+}
+.trip-name{
+	color:white;
+	background-color: #374c55;
+	font-size: 50px;
+	text-align: center;
+}
+
+.btn-gradient-3d-simple {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #ffffff;
+  background-image: linear-gradient( #FFC107 0%, #ff8b5f 100%);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #5e7fca;
+}
+
+.btn-gradient-3d-simple:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+.btn-gradient-2d-simple {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #ffffff;
+  background-image: linear-gradient(#6795fd 0%, #67ceff 100%);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #5e7fca;
+}
+
+.btn-gradient-2d-simple:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  border-bottom: none;
+}
+
+.total_btn{
+	background-image: url('bag.jpg');
+	background-position:center;  
+	background-size:cover;       
+	background-color:rgba(255,255,255,0.7);
+  background-blend-mode:lighten;                        
+  width:100%;                                            
+	height:1000px;  
+}
+.contents{
+	display: inline-block;
+}
+
+.btn {
+  padding: 8px;
+  color: white;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.trip {
+	color: white;
+  margin-right: 10px;
+  margin-left:40px;
+}
+.trip_name{
+	display: inline-block;
+	margin-top: 20px;
+	width: 130px;
+	height:40px;
+	background-color: #77848C;
+	color: rgb(41, 24, 24);
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 4px;
+}
+.back{
+	font-size: 15px;
+	color: lightgray;
+}
+
+.trip-place{
+	background-image: url('world.png');
+	background-position:center;  
+	background-size:cover;       
+	background-color:rgba(255,255,255,0.8);
+  background-blend-mode:lighten;                        
+  width:100%;                                            
+	height:1000px;
+	font-size: 20px;
+}
+
+h1.todo-messeage{
+	font-size: 30px;
+	text-align: center;
+}
+
+
+.todo-form{
+	text-align: center;
+}
+.item-form{
+	text-align: center;
+}
+
+.item-list{
+	list-style: none;
+}
+.todo-list{
+	list-style: none;
+}
+
+input[type=checkbox]:checked + span.strikethrough{
+  text-decoration: line-through;
 }

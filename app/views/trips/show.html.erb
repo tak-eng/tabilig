@@ -1,18 +1,35 @@
-<div class=#'>
- <h1>旅行先：<%=  @trip.name %></h1>
-  <div class='#'>
-    <%= link_to '持ち物登録', trip_items_path(@trip.id), method: :get, class: "#" %>
-     <div>
+<div class="item-register">
+ <div class = "trip-name">
+  <h1>旅行先：<%=  @trip.name %><%=link_to '(Topへ)', root_path, class:"back" %></h1>
+ </div>
+  <div class='total_btn'>
+    <div class = "item btn">
+      <%= link_to  "持ち物登録", trip_items_path(@trip.id), method: :get, class:"btn-gradient-3d-simple" %>
+    </div>
+    <div class = "item-list">
       <% @items.each do |item| %>
-        <%if @items =nil %>
-          持ち物を登録してください
+        <%if @items = nil %>
+          <%= "持ち物を登録してください" %>
+        <%else%>
+          <li>
+           <input type="checkbox"> <span class="strikethrough"><%= item.name %></span><%= link_to '(削除)', trip_item_path(@trip.id), method: :delete, class:'#' %>
+          </li>
+        <% end %> 
+      <% end %> 
+    </div>
+    <div class = "todo_btn">
+      <%= link_to "ミッションの登録", trip_missions_path(@trip.id), method: :get, class:"btn-gradient-2d-simple" %>
+    </div>
+    <div class="todo-list">
+      <% @missions.each do |mission| %>
+        <%if @missions == nil %>
+          <%= "持ち物を登録してください" %>
         <%else%>
          <li>
-           <%= item.name %>
-           <%= item.number%>
+          <input type="checkbox"><span class="strikethrough"><%= mission.name %></span>
          </li>
         <% end %> 
       <% end %> 
-     </div>
+    </div>
   </div>
 </div>
