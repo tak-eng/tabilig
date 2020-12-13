@@ -431,3 +431,6 @@ h1.todo-messeage{
 input[type=checkbox]:checked + span.strikethrough{
   text-decoration: line-through;
 }
+h2.attention{
+	color: darkred;
+}
