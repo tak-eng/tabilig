@@ -51,7 +51,7 @@ https://app.diagrams.net/#G13HOlrLccmZcgoCz-AlW7e39oFPOOI_Z4
 | Column | Type       | Options     |
 | ------ | ---------- | ----------- |
 | name   | string     | null: false |
-| number | integer    | null: false |
+
 
 ### Association
 - belongs_to :trips
@@ -69,10 +69,8 @@ https://app.diagrams.net/#G13HOlrLccmZcgoCz-AlW7e39oFPOOI_Z4
 
 | Column | Type       | Options     |
 | ------ | ---------- | ----------- |
-| text   | integer    | null: false |
-| year   | date       | null: false |
-| month  | date       | null: false |
-| day    | date       | null: false |
+| text   | text       | null: false |
+
 
 ### Association
 - belongs_to :trips
