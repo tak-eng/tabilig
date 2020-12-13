@@ -1,11 +1,11 @@
- <div class="item-main">
-  <h1 class="item-messeage">何を持っていきますか？</h1>
-  <%= form_with model: @item, local: true do |f| %>
+<div class="item-main">
+ <h1 class="item-messeage">何を持って行きますか？</h1>
+  <%= form_with(model: @item, local: true) do |f| %>
    <div class="item-form">
-    <%= f.text_field :name, id:"content", placeholder:"(例)財布" %>
+    <%= f.text_field :name, id:"content", placeholder:"(例)財布"%>
     <%= f.submit '登録する' , id: "submit" %>
    </div>
   <% end %>
   <div id="list">
   </div>
- </div>
+</div>
