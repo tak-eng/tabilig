@@ -20,8 +20,10 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    Item = Item.find(params[:id])
+    @trip = Trip.find(params[:trip_id])
+    item = @trip.items.find(params[:id])
     item.destroy
+    redirect_to controller: :trips, action: :show, id: @trip.id
   end
 
   private
