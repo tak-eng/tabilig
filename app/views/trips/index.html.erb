@@ -47,7 +47,7 @@
 <div>
     <div class="#">
       <% @trips.each do |trip| %>
-      <p><%= link_to trip.name, trip_path(trip.id), class: "trip_name" %><%= link_to '(削除)', trip_path(trip.id), method: :delete, class:'#' %></p>
+      <p><%= link_to trip.name, trip_path(trip.id), class: "trip_name" %><%= link_to '(削除)', trip_path(trip.id), method: :delete, class:'delete' %></p>
       <% end %>
     </div>
 </div>
