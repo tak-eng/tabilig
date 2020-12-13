@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :trips do
     resources :items
     resources :missions
-    resources :comments
+    resources :memos
   end
 end
