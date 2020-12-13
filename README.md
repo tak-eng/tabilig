@@ -65,7 +65,7 @@ https://app.diagrams.net/#G13HOlrLccmZcgoCz-AlW7e39oFPOOI_Z4
 ### Association
 - belongs_to :trips
 
-## commentsテーブル
+## memosテーブル
 
 | Column | Type       | Options     |
 | ------ | ---------- | ----------- |
