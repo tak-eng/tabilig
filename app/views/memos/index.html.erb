@@ -1,0 +1,11 @@
+ <div class="todo-main">
+ <h1 class="todo-messeage">備忘録を書こう</h1>
+  <%= form_with model: @memo, local: true do |f| %>
+   <div class="todo-form">
+    <%= f.text_field :text, id:"content", placeholder:"気になった事をメモ"%>
+    <%= f.submit '登録する' , id: "submit" %>
+   </div>
+  <% end %>
+  <div id="list">
+  </div>
+ </div>

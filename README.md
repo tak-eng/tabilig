@@ -43,7 +43,7 @@ https://app.diagrams.net/#G13HOlrLccmZcgoCz-AlW7e39oFPOOI_Z4
 
 ### Association
 - has_many :items
-- has_many :comments
+- has_many :memos
 - has_many :missions
 
 ## itemsテーブル
