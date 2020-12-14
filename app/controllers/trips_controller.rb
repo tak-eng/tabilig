@@ -21,6 +21,7 @@ class TripsController < ApplicationController
     @trip = Trip.find(params[:id])    
     @items = @trip.items
     @missions = @trip.missions
+    @memos = @trip.memos
   end
 
   def destroy
