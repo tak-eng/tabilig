@@ -31,7 +31,7 @@
     <div class="todo-list">
       <% @memos.each do |memo| %>
          <li>
-          <input type="checkbox"><span class="strikethrough"><%= memo.text %></span><%= link_to '(削除)', trip_memo_path(@trip.id, memo), method: :delete, class:'#' %>
+          ・<%= memo.text %><%= link_to '(削除)', trip_memo_path(@trip.id, memo), method: :delete, class:'#' %>
          </li>
       <% end %> 
     </div>
