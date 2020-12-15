@@ -1,6 +1,7 @@
 <div class="item-main">
  <h1 class="item-messeage">何を持って行きますか？</h1>
-  <%= form_with model: @item, local: true  do |f| %>
+  <%= form_with url: trip_items_path, local: true  do |f| %>
+   <%= render 'shared/error_messages', model: @item %>
    <div class="item-form">
     <%= f.text_field :name, id:"content", placeholder:"(例)財布"%>
     <%= f.submit '登録する' , id: "submit" %>
