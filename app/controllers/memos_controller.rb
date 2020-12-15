@@ -1,6 +1,7 @@
 class MemosController < ApplicationController
   def index
     @memos = Memo.all
+    @memo = Memo.new
     @trip = Trip.find(params[:trip_id])
   end
 
