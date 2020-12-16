@@ -441,3 +441,13 @@ h2.attention{
 .delete:hover { 
 	color: rgb(235, 198, 144); 
 }
+.error-alert{
+	text-align: center;
+	color: red;
+}
+.container{
+	text-align: center;
+}
+h3.trip-ab{
+	font-size: 30px;
+}
