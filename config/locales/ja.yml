@@ -1,0 +1,12 @@
+ja:
+ activerecord:
+   attributes:
+     trip:
+       name: 旅行先
+     item:
+       name: 持ち物
+     mission:
+       name: ミッション
+     memo:
+       text: メモ
+     
