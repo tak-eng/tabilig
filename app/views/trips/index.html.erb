@@ -44,7 +44,7 @@
 
 <h2>旅行先 <%= link_to '(登録)', new_trip_path, class: 'btn trip' %></h2>
 
-<div>
+<div class="trip-boss">
     <div class="trip-box">
       <% @trips.each do |trip| %>
       <p><%= link_to trip.name, trip_path(trip.id), class: "trip_name" %><%= link_to '(削除)', trip_path(trip.id), method: :delete, class:'delete' %></p>
