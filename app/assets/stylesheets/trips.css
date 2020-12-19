@@ -437,6 +437,7 @@ h2.attention{
 .delete{
 	color: rgb(235, 198, 144);
 	font-size: 15px;
+	margin: 0 15px
 }
 .delete:hover { 
 	color: rgb(235, 198, 144); 
@@ -450,4 +451,10 @@ h2.attention{
 }
 h3.trip-ab{
 	font-size: 30px;
+}
+
+.trip-box{
+	display: inline-flex;
+  margin: 10px;
+	padding: 10px;
 }
