@@ -1,5 +1,7 @@
 class Memo < ApplicationRecord
   belongs_to :trip
 
-  validates :text, presence: true
+  with_options presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]/} do
+    validates :text
+  end
 end

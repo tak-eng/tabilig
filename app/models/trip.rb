@@ -3,5 +3,7 @@ class Trip < ApplicationRecord
   has_many :memos, dependent: :destroy
   has_many :missions, dependent: :destroy
   
-  validates :name, presence: true
+  with_options presence: true, format: { with: /\A[ぁ-んァ-ン一-龥]/} do
+    validates :name
+  end
 end
