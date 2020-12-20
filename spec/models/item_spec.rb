@@ -6,4 +6,10 @@ RSpec.describe Item, type: :model do
     @item.valid?
     expect(@item.errors.full_messages).to include("持ち物を入力してください")
   end
+
+  it "持ち物に全角漢字、ひらがな、カタカナが使われていなければ登録できないこと" do
+    @item = Item.new(name: "123ab")
+    @item.valid?
+    expect(@item.errors.full_messages).to include("持ち物は不正な値です")
+  end
 end
