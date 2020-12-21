@@ -385,8 +385,8 @@ ol {
 	margin-top: 20px;
 	width: 170px;
 	height:40px;
-	background-color: #77848C;
-	color: rgb(41, 24, 24);
+	background-color: #f0e663;
+	color: rgb(25, 24, 41);
 	font-weight: bold;
 	font-size: 20px;
 	text-align: center;
@@ -435,7 +435,7 @@ h2.attention{
 	color: darkred;
 }
 .delete{
-	color: rgb(235, 198, 144);
+	color: rgb(61, 54, 43);
 	font-size: 15px;
 	margin: 0 10px
 }
