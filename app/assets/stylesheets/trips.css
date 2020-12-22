@@ -303,6 +303,7 @@ ol {
 }
 
 .btn-gradient-3d-simple {
+	font-size: 25px;
   display: inline-block;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -321,6 +322,7 @@ ol {
 }
 
 .btn-gradient-2d-simple {
+	font-size: 25px;
   display: inline-block;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -338,6 +340,7 @@ ol {
   border-bottom: none;
 }
 .btn-gradient-1d-simple {
+	font-size: 25px;
   display: inline-block;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -423,9 +426,11 @@ h1.todo-messeage{
 
 .item-list{
 	list-style: none;
+	font-size: 20px;
 }
 .todo-list{
 	list-style: none;
+	font-size: 20px;
 }
 
 input[type=checkbox]:checked + span.strikethrough{
