@@ -323,6 +323,7 @@ ol {
 
 .btn-gradient-2d-simple {
 	font-size: 25px;
+	margin-top: 40px;
   display: inline-block;
   padding: 0.5em 1em;
   text-decoration: none;
@@ -341,6 +342,7 @@ ol {
 }
 .btn-gradient-1d-simple {
 	font-size: 25px;
+	margin-top: 40px;
   display: inline-block;
   padding: 0.5em 1em;
   text-decoration: none;
