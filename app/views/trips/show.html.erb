@@ -8,7 +8,7 @@
     </div>
     <div class = "item-list">
       <% @items.each do |item| %>
-          <li>
+          <li class="item-text">
            <input type="checkbox"> <span class="strikethrough"><%= item.name %></span><%= link_to '(削除)', trip_item_path(@trip.id, item), method: :delete, class:'#' %>
 
           </li>
@@ -20,7 +20,7 @@
     <div class="todo-list">
       <h2 class="attention">※より具体的に書こう！</h2>
       <% @missions.each do |mission| %>
-         <li>
+         <li class="todo-text">
           <input type="checkbox"><span class="strikethrough"><%= mission.name %></span><%= link_to '(削除)', trip_mission_path(@trip.id, mission), method: :delete, class:'#' %>
          </li>
       <% end %> 
@@ -30,7 +30,7 @@
     </div>
     <div class="todo-list">
       <% @memos.each do |memo| %>
-         <li>
+         <li class="memo-text">
           ・<%= memo.text %><%= link_to '(削除)', trip_memo_path(@trip.id, memo), method: :delete, class:'#' %>
          </li>
       <% end %> 

@@ -468,3 +468,12 @@ h3.trip-ab{
 	flex-wrap:wrap;
 	vertical-align: middle;
 }
+.todo-text{
+	font-size: 22px;
+}
+.item-text{
+	font-size: 22px;
+}
+.memo-text{
+	font-size: 22px;
+}
