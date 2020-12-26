@@ -5,6 +5,7 @@
    <div class="todo-form">
     <%= f.text_field :text, id:"content", placeholder:"気になった事をメモ"%>
     <%= f.submit '登録する' , id: "submit" %>
+    <br><%=link_to '(Topへ)', root_path, class:"back-item" %>
    </div>
   <% end %>
   <div id="list">
