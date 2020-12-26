@@ -5,6 +5,7 @@
    <div class="item-form">
     <%= f.text_field :name, id:"content", placeholder:"(例)財布"%>
     <%= f.submit '登録する' , id: "submit" %>
+    <br><%=link_to '(Topへ)', root_path, class:"back-item" %>
    </div>
   <% end %>
   <div id="list">
