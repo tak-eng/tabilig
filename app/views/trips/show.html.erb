@@ -20,7 +20,7 @@
     <div class="todo-list">
       <% @missions.each do |mission| %>
          <li class="todo-text">
-          <input type="checkbox"><span class="strikethrough"><%= mission.name %></span><%= link_to '(削除)', trip_mission_path(@trip.id, mission), method: :delete, class:'#' %>
+          <input type="checkbox"><span class="strikethrough"><%= mission.name %></span><%= link_to '(削除)', trip_mission_path(@trip.id, mission), method: :delete, class:'test' %>
          </li>
       <% end %> 
     </div>
