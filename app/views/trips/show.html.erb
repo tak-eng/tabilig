@@ -9,7 +9,7 @@
     <div class = "item-list">
       <% @items.each do |item| %>
           <li class="item-text">
-           <input type="checkbox"> <span class="strikethrough"><%= item.name %></span><%= link_to '(削除)', trip_item_path(@trip.id, item), method: :delete, class:'#' %>
+           <input type="checkbox"> <span class="strikethrough"><%= item.name %></span><%= link_to '(削除)', trip_item_path(@trip.id, item), method: :delete, class:'mix' %>
 
           </li>
       <% end %> 
