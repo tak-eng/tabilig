@@ -30,7 +30,7 @@
     <div class="todo-list">
       <% @memos.each do |memo| %>
          <li class="memo-text">
-          ・<%= memo.text %><%= link_to '(削除)', trip_memo_path(@trip.id, memo), method: :delete, class:'#' %>
+          ・<%= memo.text %><%= link_to '(削除)', trip_memo_path(@trip.id, memo), method: :delete, class:'test' %>
          </li>
       <% end %> 
     </div>
