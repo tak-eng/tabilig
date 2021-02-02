@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', '~> 4.0.0'
 gem 'rails-i18n'
 gem 'dotenv-rails'
+gem 'pg'
